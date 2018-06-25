@@ -1,0 +1,41 @@
+mat-card {
+  margin: 10px auto;
+  max-width: 800px;
+  padding: 0px;
+  width: 70%;
+
+  mat-card-header {
+    padding: 0 20px;
+
+    h1 {
+      margin: 15px 0;
+    }
+  }
+
+  mat-card-content {
+    padding: 0 20px;
+
+    section {
+      overflow: hidden;
+      padding: 20px 0;
+
+      .form-label {
+        float: left;
+        margin: 0 0 0 15px;
+      }
+
+      .form-control {
+        float: right;
+        margin: 0 15px 0 0;
+      }
+    }
+  }
+}
+
+mat-radio-button {
+  margin: 0 5px;
+}
+
+.hidden-selections {
+  font-size: 12px;
+}

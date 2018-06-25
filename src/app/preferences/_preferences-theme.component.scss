@@ -1,0 +1,23 @@
+@import '~@angular/material/theming';
+
+@mixin flii-preferences-theme($theme) {
+  $primary: map-get($theme, primary);
+  $foreground: map-get($theme, foreground);
+
+  mat-card-header {
+    background-color: mat-color($primary);
+    color: mat-color($primary, '500-contrast');
+  }
+
+  mat-card-content {
+    color: mat-color($foreground, 'secondary-text');
+  }
+
+  mat-card-subtitle {
+    color: mat-color($primary, 50) !important;
+  }
+
+  .hidden-selections {
+    color: mat-color($foreground, 'secondary-text');
+  }
+}
