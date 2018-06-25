@@ -1,7 +1,7 @@
 <mat-card>
   <mat-card-header>
     <mat-card-title>
-      <h1 class="mat-headline">Seat</h1>
+      <h1 class="mat-headline">Seat Preferences</h1>
     </mat-card-title>
     <mat-card-subtitle>
       <h4 class="mat-subheading-1">Settings that help us choose <b><i>where</i></b> to seat you</h4>
@@ -9,7 +9,7 @@
   </mat-card-header>
   <mat-card-content>
     <section>
-      <h4 class="mat-subheading-1 form-label">Seat Location</h4>
+      <h4 class="mat-subheading-1 form-label">Seat Type</h4>
         <mat-radio-group class="form-control" [(ngModel)]="seatOption">
           <mat-radio-button color="primary" *ngFor="let seat of seatOptions" [value]="seat.id">
             {{seat.name}}
@@ -26,13 +26,18 @@
         <h4 class="mat-subheading-1 form-label">Near Wing</h4>
         <mat-slide-toggle class="form-control" color="primary"></mat-slide-toggle>
       </section>
+      <mat-divider></mat-divider>
+      <section>
+        <h4 class="mat-subheading-1 form-label">Avoid Restrooms</h4>
+        <mat-slide-toggle class="form-control" color="primary"></mat-slide-toggle>
+      </section>
   </mat-card-content>
 </mat-card>
 
 <mat-card>
   <mat-card-header>
     <mat-card-title>
-      <h1 class="mat-headline">Social</h1>
+      <h1 class="mat-headline">Social Preferences</h1>
     </mat-card-title>
     <mat-card-subtitle>
       <h4 class="mat-subheading-1">Settings that help us choose <b><i>who</i></b> to seat you with</h4>
