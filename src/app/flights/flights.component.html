@@ -1,3 +1,10 @@
-<p>
-  flights works!
-</p>
+<div id="filters">
+  <span class="filter" *ngFor="let filter of filters" (click)="selectFilter(filter.id)" [ngClass]="{ selected: isFilterSelected(filter.id) }">{{filter.display}}</span>
+</div>
+
+<mat-card>
+</mat-card>
+
+<mat-card></mat-card>
+
+<mat-card></mat-card>

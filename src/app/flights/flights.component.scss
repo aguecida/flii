@@ -1,0 +1,18 @@
+mat-card, #filters {
+  margin: 10px auto;
+  max-width: 800px;
+  width: 70%;
+}
+
+#filters {
+  margin: 20px auto;
+
+  .filter {
+    cursor: pointer;
+    margin-right: 25px;
+  }
+
+  .filter.selected {
+    font-weight: bold;
+  }
+}

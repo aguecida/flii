@@ -1,0 +1,11 @@
+@import '~@angular/material/theming';
+
+@mixin flii-avatar-theme($theme) {
+  $primary: map-get($theme, primary);
+
+  .avatar {
+    background-color: mat-color($primary);
+    border-color: mat-color($primary);
+    color: #fff;
+  }
+}
