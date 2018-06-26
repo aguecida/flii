@@ -1,0 +1,9 @@
+@import '~@angular/material/theming';
+
+@mixin flii-header-theme($theme) {
+  $primary: map-get($theme, primary);
+
+  #logo {
+    color: mat-color($primary);
+  }
+}

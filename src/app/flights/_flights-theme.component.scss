@@ -2,8 +2,26 @@
 
 @mixin flii-flights-theme($theme) {
   $primary: map-get($theme, primary);
+  $foreground: map-get($theme, foreground);
 
   .filter {
     color: mat-color($primary);
+  }
+
+  .status {
+    background-color: mat-color($primary);
+    color: mat-color($primary, '500-contrast');
+  }
+
+  .content {
+    color: mat-color($foreground, 'secondary-text');
+  }
+
+  .actions {
+    color: mat-color($primary);
+
+    .action.disabled {
+      color: mat-color($foreground, 'disabled-button');
+    }
   }
 }

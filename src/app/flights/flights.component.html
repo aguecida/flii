@@ -2,9 +2,22 @@
   <span class="filter" *ngFor="let filter of filters" (click)="selectFilter(filter.id)" [ngClass]="{ selected: isFilterSelected(filter.id) }">{{filter.display}}</span>
 </div>
 
-<mat-card>
+<mat-card *ngFor="let flight of filteredFlights">
+  <div class="status">
+    <mat-icon [matTooltip]="getStatusText(flight.status)">{{getStatusIcon(flight.status)}}</mat-icon>
+  </div>
+  <div class="content">
+    <div class="details">
+      <span>{{flight.flightNumber}}</span>
+      &bull;
+      <span>{{flight.origin}} to {{flight.destination}}</span>
+    </div>
+    <div class="date">
+      <span>{{flight.date}}</span>
+    </div>
+  </div>
+  <div class="actions">
+    <mat-icon class="action" matTooltip="Connect with passengers">person_add</mat-icon>
+    <mat-icon class="action" [matTooltip]="flight.status === 2 ? 'Rating available after flight completion' : 'Rate this flight'" [ngClass]="{ disabled: flight.status === 2 }">star</mat-icon>
+  </div>
 </mat-card>
-
-<mat-card></mat-card>
-
-<mat-card></mat-card>

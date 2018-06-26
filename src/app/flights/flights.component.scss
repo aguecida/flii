@@ -1,6 +1,14 @@
+$card-height: 60px;
+$icon-margin: 17px;
+
+mat-card {
+  height: $card-height;
+}
+
 mat-card, #filters {
   margin: 10px auto;
   max-width: 800px;
+  padding: 0;
   width: 70%;
 }
 
@@ -14,5 +22,53 @@ mat-card, #filters {
 
   .filter.selected {
     font-weight: bold;
+  }
+}
+
+.status {
+  height: $card-height;
+  float: left;
+  text-align: center;
+  width: $card-height;
+
+  mat-icon {
+    cursor: default;
+    margin-top: $icon-margin;
+  }
+}
+
+.content {
+  $content-padding: 5px;
+  float: left;
+  height: calc(100% - #{$content-padding} * 2);
+  padding: $content-padding;
+  // width: calc(100% - 60px - 10px);
+}
+
+.details {
+  margin-top: 5px;
+
+  span {
+    margin: 5px 10px;
+  }
+}
+
+.date {
+  span {
+    font-size: 12px;
+    margin: 5px 10px;
+  }
+}
+
+.actions {
+  float: right;
+
+  .action {
+    cursor: pointer;
+    margin: $icon-margin 6px 0 0;
+
+    &.disabled {
+      cursor: default;
+    }
   }
 }

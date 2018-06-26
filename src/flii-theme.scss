@@ -1,4 +1,5 @@
 @import '~@angular/material/theming';
+@import 'app/header/header-theme.component.scss';
 @import 'app/preferences/preferences-theme.component.scss';
 @import 'app/flights/flights-theme.component.scss';
 @import 'app/avatar/avatar-theme.component.scss';
@@ -12,7 +13,7 @@
 // (imported above). For each palette, you can optionally specify a default, lighter, and darker
 // hue. Available color palettes: https://material.io/design/color/
 $flii-app-primary: mat-palette($mat-light-blue);
-$flii-app-accent:  mat-palette($mat-green, A200, A100, A400);
+$flii-app-accent:  mat-palette($mat-amber);
 
 // The warn palette is optional (defaults to red).
 $flii-app-warn:    mat-palette($mat-red);
@@ -21,6 +22,7 @@ $flii-app-warn:    mat-palette($mat-red);
 $flii-app-theme:   mat-light-theme($flii-app-primary, $flii-app-accent, $flii-app-warn);
 
 @mixin flii-theme($theme) {
+  @include flii-header-theme($theme);
   @include flii-preferences-theme($theme);
   @include flii-flights-theme($theme);
   @include flii-avatar-theme($theme);
