@@ -10,6 +10,7 @@ import { HeaderComponent } from './header/header.component';
 import { PreferencesComponent } from './preferences/preferences.component';
 import { FlightsComponent } from './flights/flights.component';
 import { AvatarComponent } from './avatar/avatar.component';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { AvatarComponent } from './avatar/avatar.component';
     HeaderComponent,
     PreferencesComponent,
     FlightsComponent,
-    AvatarComponent
+    AvatarComponent,
+    HomeComponent
   ],
   imports: [
     AppRoutingModule,
