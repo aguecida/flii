@@ -46,17 +46,17 @@
   <mat-card-content>
     <section>
       <h4 class="mat-subheading-1 form-label" style="margin-top: 0.84375em">Languages</h4>
-        <mat-form-field class="form-control">
-          <mat-select placeholder="Languages" [formControl]="languages" multiple>
-            <mat-select-trigger>
-              {{languages.value ? languages.value[0] : ''}}
-              <span *ngIf="languages.value?.length > 1" class="hidden-selections">
-                (+{{languages.value.length - 1}} others)
-              </span>
-            </mat-select-trigger>
-            <mat-option *ngFor="let language of languageList" [value]="language">{{language}}</mat-option>
-          </mat-select>
-        </mat-form-field>
+      <mat-form-field class="form-control">
+        <mat-select placeholder="Languages" [formControl]="languages" multiple>
+          <mat-select-trigger>
+            {{languages.value ? languages.value[0] : ''}}
+            <span *ngIf="languages.value?.length > 1" class="hidden-selections">
+              (+{{languages.value.length - 1}} others)
+            </span>
+          </mat-select-trigger>
+          <mat-option *ngFor="let language of languageList" [value]="language">{{language}}</mat-option>
+        </mat-select>
+      </mat-form-field>
     </section>
     <mat-divider></mat-divider>
     <section>

@@ -2,7 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { MatRadioModule, MatSelectModule, MatSlideToggleModule, MatCardModule, MatDividerModule, MatToolbarModule, MatButtonModule, MatIconModule } from '@angular/material';
+import { MatRadioModule, MatSelectModule, MatSlideToggleModule, MatCardModule, MatDividerModule, MatToolbarModule, MatButtonModule, MatIconModule, MatMenuModule } from '@angular/material';
 
 import { AppRoutingModule } from './app.routing';
 import { AppComponent } from './app.component';
@@ -32,7 +32,8 @@ import { AvatarComponent } from './avatar/avatar.component';
     MatDividerModule,
     MatToolbarModule,
     MatButtonModule,
-    MatIconModule
+    MatIconModule,
+    MatMenuModule
   ],
   providers: [],
   bootstrap: [AppComponent]
