@@ -55,4 +55,8 @@ export class RatingsComponent implements OnInit {
     });
   }
 
+  starsSelected() {
+    return !this.stars.some(star => star.selected);
+  }
+
 }
