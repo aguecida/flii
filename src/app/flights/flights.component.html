@@ -1,5 +1,10 @@
 <div id="filters">
   <span class="filter" *ngFor="let filter of filters" (click)="selectFilter(filter.id)" [ngClass]="{ selected: isFilterSelected(filter.id) }">{{filter.display}}</span>
+  <div class="spacer"></div>
+  <mat-form-field>
+      <input matInput placeholder="Search">
+      <mat-icon matSuffix>search</mat-icon>
+    </mat-form-field>
 </div>
 
 <mat-card *ngFor="let flight of filteredFlights">
@@ -17,7 +22,7 @@
     </div>
   </div>
   <div class="actions">
-    <mat-icon class="action" matTooltip="Connect with passengers">person_add</mat-icon>
+    <mat-icon class="action" (click)="openConnect(flight)" matTooltip="Connect with passengers">person_add</mat-icon>
     <mat-icon class="action" (click)="openRatings(flight)" [matTooltip]="!ratingsAllowed(flight) ? 'Rating available after flight completion' : 'Rate this flight'" [ngClass]="{ disabled: !ratingsAllowed(flight) }">star</mat-icon>
   </div>
 </mat-card>

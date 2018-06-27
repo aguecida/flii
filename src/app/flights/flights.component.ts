@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { MatDialog, MatDialogRef } from '@angular/material';
+import { MatDialog, MatDialogRef, MatSnackBar } from '@angular/material';
 import { RatingsComponent } from '../ratings/ratings.component';
+import { ConnectComponent } from '../connect/connect.component';
+import { StatusMessageComponent } from '../status-message/status-message.component';
+import { StatusMessage } from '../models/status-message';
 
 @Component({
   selector: 'app-flights',
@@ -8,6 +11,9 @@ import { RatingsComponent } from '../ratings/ratings.component';
   styleUrls: ['./flights.component.scss']
 })
 export class FlightsComponent implements OnInit {
+
+  ratingsDialogRef: MatDialogRef<RatingsComponent, any>;
+  connectDialogRef: MatDialogRef<ConnectComponent, any>;
 
   filters = [
     { id: 1, display: 'All' },
@@ -25,7 +31,7 @@ export class FlightsComponent implements OnInit {
 
   filteredFlights = this.flights;
 
-  constructor(public dialog: MatDialog) { }
+  constructor(public dialog: MatDialog, public snackBar: MatSnackBar) { }
 
   ngOnInit() {
   }
@@ -54,7 +60,21 @@ export class FlightsComponent implements OnInit {
   openRatings(flight) {
     if (!this.ratingsAllowed(flight)) return;
 
-    this.dialog.open(RatingsComponent, {
+    this.ratingsDialogRef = this.dialog.open(RatingsComponent, {
+      data: flight
+    });
+
+    this.ratingsDialogRef.afterClosed().subscribe(statusMessage => {
+      if (statusMessage) {
+        this.snackBar.openFromComponent(StatusMessageComponent, {
+          data: statusMessage
+        });
+      }
+    });
+  }
+
+  openConnect(flight) {
+    this.connectDialogRef = this.dialog.open(ConnectComponent, {
       data: flight
     });
   }

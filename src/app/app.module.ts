@@ -2,8 +2,9 @@ import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { MatRadioModule, MatSelectModule, MatSlideToggleModule, MatCardModule, MatDividerModule, MatDialogModule } from '@angular/material';
+import { MatRadioModule, MatSelectModule, MatSlideToggleModule, MatCardModule, MatDividerModule, MatDialogModule, MAT_SNACK_BAR_DEFAULT_OPTIONS } from '@angular/material';
 import { MatToolbarModule, MatButtonModule, MatIconModule, MatMenuModule, MatTooltipModule, MatInputModule } from '@angular/material';
+import { MatSnackBarModule } from '@angular/material';
 
 import { AppRoutingModule } from './app.routing';
 import { AppComponent } from './app.component';
@@ -12,6 +13,8 @@ import { PreferencesComponent } from './preferences/preferences.component';
 import { FlightsComponent } from './flights/flights.component';
 import { HomeComponent } from './home/home.component';
 import { RatingsComponent } from './ratings/ratings.component';
+import { ConnectComponent } from './connect/connect.component';
+import { StatusMessageComponent } from './status-message/status-message.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +23,9 @@ import { RatingsComponent } from './ratings/ratings.component';
     PreferencesComponent,
     FlightsComponent,
     HomeComponent,
-    RatingsComponent
+    RatingsComponent,
+    ConnectComponent,
+    StatusMessageComponent
   ],
   imports: [
     AppRoutingModule,
@@ -39,12 +44,17 @@ import { RatingsComponent } from './ratings/ratings.component';
     MatIconModule,
     MatMenuModule,
     MatTooltipModule,
-    MatInputModule
+    MatInputModule,
+    MatSnackBarModule
   ],
   entryComponents: [
-    RatingsComponent
+    RatingsComponent,
+    ConnectComponent,
+    StatusMessageComponent
   ],
-  providers: [],
+  providers: [
+    { provide: MAT_SNACK_BAR_DEFAULT_OPTIONS, useValue: { duration: 3000, horizontalPosition: 'left' }}
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

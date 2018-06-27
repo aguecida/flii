@@ -1,6 +1,8 @@
 import { Component, OnInit, Inject } from '@angular/core';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material';
 
+import { StatusMessage, SuccessStatusMessage } from '../models/status-message';
+
 @Component({
   selector: 'app-ratings',
   templateUrl: './ratings.component.html',
@@ -57,6 +59,15 @@ export class RatingsComponent implements OnInit {
 
   starsSelected() {
     return !this.stars.some(star => star.selected);
+  }
+
+  submit() {
+    if (!this.selectedStar) return;
+
+    let statusMessage: StatusMessage;
+    statusMessage = new SuccessStatusMessage('Rating submitted');
+
+    this.dialogRef.close(statusMessage);
   }
 
 }
