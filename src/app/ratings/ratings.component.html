@@ -4,7 +4,7 @@
     <mat-icon *ngFor="let star of stars" (click)="selectStar(star.number)" (mouseenter)="hoverStar(star.number)" (mouseleave)="unhoverStar()">{{star.icon}}</mat-icon>
   </div>
 </mat-dialog-content>
-<mat-dialog-actions>
+<mat-dialog-actions align="end">
   <button mat-button mat-dialog-close tabindex="-1">Cancel</button>
   <!-- The mat-dialog-close directive optionally accepts a value as a result for the dialog. -->
   <button mat-raised-button color="primary" [disabled]="starsSelected()" [mat-dialog-close]="true" tabindex="-1">Submit</button>
