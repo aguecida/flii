@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { MatDialog, MatDialogRef } from '@angular/material';
+import { RatingsComponent } from '../ratings/ratings.component';
 
 @Component({
   selector: 'app-flights',
@@ -23,7 +25,7 @@ export class FlightsComponent implements OnInit {
 
   filteredFlights = this.flights;
 
-  constructor() { }
+  constructor(public dialog: MatDialog) { }
 
   ngOnInit() {
   }
@@ -43,6 +45,18 @@ export class FlightsComponent implements OnInit {
 
   getStatusIcon(id) {
     return this.filters.find(filter => filter.id === id).icon;
+  }
+
+  ratingsAllowed(flight) {
+    return flight.status !== 2;
+  }
+
+  openRatings(flight) {
+    if (!this.ratingsAllowed(flight)) return;
+
+    this.dialog.open(RatingsComponent, {
+      data: flight
+    });
   }
 
 }

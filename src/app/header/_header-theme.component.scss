@@ -2,8 +2,13 @@
 
 @mixin flii-header-theme($theme) {
   $primary: map-get($theme, primary);
+  $foreground: map-get($theme, foreground);
 
   #logo {
     color: mat-color($primary);
+  }
+
+  #more-actions {
+    color: mat-color($foreground, 'icon');
   }
 }

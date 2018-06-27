@@ -18,6 +18,6 @@
   </div>
   <div class="actions">
     <mat-icon class="action" matTooltip="Connect with passengers">person_add</mat-icon>
-    <mat-icon class="action" [matTooltip]="flight.status === 2 ? 'Rating available after flight completion' : 'Rate this flight'" [ngClass]="{ disabled: flight.status === 2 }">star</mat-icon>
+    <mat-icon class="action" (click)="openRatings(flight)" [matTooltip]="!ratingsAllowed(flight) ? 'Rating available after flight completion' : 'Rate this flight'" [ngClass]="{ disabled: !ratingsAllowed(flight) }">star</mat-icon>
   </div>
 </mat-card>

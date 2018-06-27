@@ -3,5 +3,11 @@
   <div style="flex: 1 1 auto;"></div>
   <button mat-button color="primary" routerLink="/preferences">Preferences</button>
   <button mat-button color="primary" routerLink="/flights">Flights</button>
-  <app-avatar></app-avatar>
+  <button id="more-actions" mat-icon-button [matMenuTriggerFor]="menu">
+    <mat-icon>more_vert</mat-icon>
+  </button>
+  <mat-menu #menu="matMenu" overlapTrigger="false">
+    <button mat-menu-item>Profile</button>
+    <button mat-menu-item>Logout</button>
+  </mat-menu>
 </mat-toolbar>
