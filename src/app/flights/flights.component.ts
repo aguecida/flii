@@ -3,7 +3,6 @@ import { MatDialog, MatDialogRef, MatSnackBar } from '@angular/material';
 import { RatingsComponent } from '../ratings/ratings.component';
 import { ConnectComponent } from '../connect/connect.component';
 import { StatusMessageComponent } from '../status-message/status-message.component';
-import { StatusMessage } from '../models/status-message';
 
 @Component({
   selector: 'app-flights',
@@ -21,7 +20,8 @@ export class FlightsComponent implements OnInit {
     { id: 3, display: 'Completed', icon: 'check' }
   ];
 
-  selectedFilterId = 1;
+  statusFilter = 1;
+  searchFilter = '';
 
   flights = [
     { id: 1, status: 2, flightNumber: 'AC360', origin: 'Toronto', destination: 'Amsterdam', date: 'June 26, 2018' },
@@ -37,12 +37,30 @@ export class FlightsComponent implements OnInit {
   }
 
   selectFilter(id) {
-    this.selectedFilterId = id;
-    this.filteredFlights = this.flights.filter(flight => id === 1 ? true : flight.status === id);
+    this.statusFilter = id;
+    this.applyFilters();
+  }
+
+  searchFilterChange(newValue) {
+    this.searchFilter = newValue.toLowerCase();
+    this.applyFilters();
+  }
+
+  applyFilters() {
+    // Filter by flight status
+    this.filteredFlights = this.flights.filter(flight => this.statusFilter === 1 ? true : flight.status === this.statusFilter);
+
+    // Filter by search text
+    this.filteredFlights = this.filteredFlights.filter(flight => {
+      const flightNumber = flight.flightNumber.toLowerCase();
+      const origin = flight.origin.toLowerCase();
+      const destination = flight.destination.toLowerCase();
+      return flightNumber.includes(this.searchFilter) || origin.includes(this.searchFilter) || destination.includes(this.searchFilter);
+    });
   }
 
   isFilterSelected(id) {
-    return this.selectedFilterId === id;
+    return this.statusFilter === id;
   }
 
   getStatusText(id) {

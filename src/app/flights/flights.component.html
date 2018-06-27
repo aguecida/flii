@@ -2,9 +2,9 @@
   <span class="filter" *ngFor="let filter of filters" (click)="selectFilter(filter.id)" [ngClass]="{ selected: isFilterSelected(filter.id) }">{{filter.display}}</span>
   <div class="spacer"></div>
   <mat-form-field>
-      <input matInput placeholder="Search">
-      <mat-icon matSuffix>search</mat-icon>
-    </mat-form-field>
+    <input matInput [ngModel]="searchFilter" (ngModelChange)="searchFilterChange($event)" placeholder="Search">
+    <mat-icon matSuffix>search</mat-icon>
+  </mat-form-field>
 </div>
 
 <mat-card *ngFor="let flight of filteredFlights">
