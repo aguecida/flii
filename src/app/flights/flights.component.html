@@ -1,28 +1,32 @@
-<div id="filters">
-  <span class="filter" *ngFor="let filter of filters" (click)="selectFilter(filter.id)" [ngClass]="{ selected: isFilterSelected(filter.id) }">{{filter.display}}</span>
-  <div class="spacer"></div>
-  <mat-form-field>
-    <input matInput [ngModel]="searchFilter" (ngModelChange)="searchFilterChange($event)" placeholder="Search">
-    <mat-icon matSuffix>search</mat-icon>
-  </mat-form-field>
-</div>
+<div class="page-container">
+  <div id="filters">
+    <span class="filter" *ngFor="let filter of filters" (click)="selectFilter(filter.id)" [ngClass]="{ selected: isFilterSelected(filter.id) }">{{filter.display}}</span>
+    <div class="spacer"></div>
+    <mat-form-field>
+      <input matInput [ngModel]="searchFilter" (ngModelChange)="searchFilterChange($event)" placeholder="Search">
+      <mat-icon matSuffix>search</mat-icon>
+    </mat-form-field>
+  </div>
 
-<mat-card *ngFor="let flight of filteredFlights">
-  <div class="status">
-    <mat-icon [matTooltip]="getStatusText(flight.status)">{{getStatusIcon(flight.status)}}</mat-icon>
-  </div>
-  <div class="content">
-    <div class="details">
-      <span>{{flight.flightNumber}}</span>
-      &bull;
-      <span>{{flight.origin}} to {{flight.destination}}</span>
+  <p *ngIf="filteredFlights.length === 0" class="no-flights">No flights found</p>
+
+  <mat-card *ngFor="let flight of filteredFlights">
+    <div class="status">
+      <mat-icon [matTooltip]="getStatusText(flight.status)">{{getStatusIcon(flight.status)}}</mat-icon>
     </div>
-    <div class="date">
-      <span>{{flight.date}}</span>
+    <div class="content">
+      <div class="details">
+        <span>{{flight.flightNumber}}</span>
+        &bull;
+        <span>{{flight.origin}} &rarr; {{flight.destination}}</span>
+      </div>
+      <div class="date">
+        <span>{{flight.date}}</span>
+      </div>
     </div>
-  </div>
-  <div class="actions">
-    <mat-icon class="action" (click)="openConnect(flight)" matTooltip="Connect with passengers">person_add</mat-icon>
-    <mat-icon class="action" (click)="openRatings(flight)" [matTooltip]="!ratingsAllowed(flight) ? 'Rating available after flight completion' : 'Rate this flight'" [ngClass]="{ disabled: !ratingsAllowed(flight) }">star</mat-icon>
-  </div>
-</mat-card>
+    <div class="actions">
+      <mat-icon class="action" (click)="openConnect(flight)" matTooltip="Connect with passengers">person_add</mat-icon>
+      <mat-icon class="action" (click)="openRatings(flight)" [matTooltip]="!ratingsAllowed(flight) ? 'Rating available after flight completion' : 'Rate this flight'" [ngClass]="{ disabled: !ratingsAllowed(flight) }">star</mat-icon>
+    </div>
+  </mat-card>
+</div>

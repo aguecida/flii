@@ -13,7 +13,7 @@
     color: mat-color($primary, '500-contrast');
   }
 
-  .content {
+  .content, .no-flights {
     color: mat-color($foreground, 'secondary-text');
   }
 
