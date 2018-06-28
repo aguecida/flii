@@ -25,6 +25,7 @@
       </div>
     </div>
     <div class="actions">
+        <mat-icon class="action" matTooltip="View seat map">airline_seat_legroom_normal</mat-icon>
       <mat-icon class="action" (click)="openConnect(flight)" matTooltip="Connect with passengers">person_add</mat-icon>
       <mat-icon class="action" (click)="openRatings(flight)" [matTooltip]="!ratingsAllowed(flight) ? 'Rating available after flight completion' : 'Rate this flight'" [ngClass]="{ disabled: !ratingsAllowed(flight) }">star</mat-icon>
     </div>
