@@ -15,6 +15,7 @@ import { HomeComponent } from './components/home/home.component';
 import { RatingsComponent } from './components/ratings/ratings.component';
 import { ConnectComponent } from './components/connect/connect.component';
 import { StatusMessageComponent } from './components/status-message/status-message.component';
+import { ProfileComponent } from './components/profile/profile.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { StatusMessageComponent } from './components/status-message/status-messa
     HomeComponent,
     RatingsComponent,
     ConnectComponent,
-    StatusMessageComponent
+    StatusMessageComponent,
+    ProfileComponent
   ],
   imports: [
     AppRoutingModule,
