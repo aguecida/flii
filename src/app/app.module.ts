@@ -13,7 +13,7 @@ import { PreferencesComponent } from './preferences/preferences.component';
 import { FlightsComponent } from './flights/flights.component';
 import { HomeComponent } from './home/home.component';
 import { RatingsComponent } from './ratings/ratings.component';
-import { ConnectComponent } from './connect/connect.component';
+import { ConnectComponent } from './components/connect/connect.component';
 import { StatusMessageComponent } from './status-message/status-message.component';
 
 @NgModule({
