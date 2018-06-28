@@ -1,7 +1,7 @@
 import { Component, OnInit, Inject } from '@angular/core';
 import { MAT_SNACK_BAR_DATA } from '@angular/material';
 
-import { StatusMessage } from '../models/status-message';
+import { StatusMessage } from '../../models/status-message';
 
 @Component({
   selector: 'app-status-message',

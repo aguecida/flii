@@ -8,13 +8,13 @@ import { MatSnackBarModule } from '@angular/material';
 
 import { AppRoutingModule } from './app.routing';
 import { AppComponent } from './app.component';
-import { HeaderComponent } from './header/header.component';
+import { HeaderComponent } from './components/header/header.component';
 import { PreferencesComponent } from './preferences/preferences.component';
 import { FlightsComponent } from './flights/flights.component';
 import { HomeComponent } from './home/home.component';
-import { RatingsComponent } from './ratings/ratings.component';
+import { RatingsComponent } from './components/ratings/ratings.component';
 import { ConnectComponent } from './components/connect/connect.component';
-import { StatusMessageComponent } from './status-message/status-message.component';
+import { StatusMessageComponent } from './components/status-message/status-message.component';
 
 @NgModule({
   declarations: [
