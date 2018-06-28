@@ -1,7 +1,7 @@
 @import '~@angular/material/theming';
-@import 'app/header/header-theme.component.scss';
-@import 'app/preferences/preferences-theme.component.scss';
-@import 'app/flights/flights-theme.component.scss';
+@import 'app/components/header/header-theme.component.scss';
+@import 'app/components/preferences/preferences-theme.component.scss';
+@import 'app/components/flights/flights-theme.component.scss';
 
 // Include the common styles for Angular Material. We include this here so that you only
 // have to load a single css file for Angular Material in your app.

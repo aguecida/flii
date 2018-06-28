@@ -1,8 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { MatDialog, MatDialogRef, MatSnackBar } from '@angular/material';
-import { RatingsComponent } from '../components/ratings/ratings.component';
-import { ConnectComponent } from '../components/connect/connect.component';
-import { StatusMessageComponent } from '../components/status-message/status-message.component';
+
+import { RatingsComponent } from '../ratings/ratings.component';
+import { ConnectComponent } from '../connect/connect.component';
+import { StatusMessageComponent } from '../status-message/status-message.component';
 
 @Component({
   selector: 'app-flights',
