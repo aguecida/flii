@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Inject } from '@angular/core';
+import { DOCUMENT } from '@angular/platform-browser';
+import { MatSlideToggleChange } from '@angular/material';
 
 @Component({
   selector: 'app-profile',
@@ -7,9 +9,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProfileComponent implements OnInit {
 
-  constructor() { }
+  constructor(@Inject(DOCUMENT) private document: Document) { }
 
   ngOnInit() {
+  }
+
+  midnightModeToggled(toggle: MatSlideToggleChange) {
+    this.document.documentElement.className = toggle.checked ? 'flii-dark-theme' : '';
   }
 
 }
