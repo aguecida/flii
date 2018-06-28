@@ -2,6 +2,12 @@
 
 @mixin flii-header-theme($theme) {
   $primary: map-get($theme, primary);
+  $background: map-get($theme, background);
+
+  mat-toolbar {
+    background-color: mat-color($background, 'card') !important;
+    box-shadow: 0 1px 3px 1px mat-color($background, 'status-bar');
+  }
 
   #logo {
     color: mat-color($primary);

@@ -1,0 +1,9 @@
+@import '~@angular/material/theming';
+
+@mixin flii-global-theme($theme) {
+  $background: map-get($theme, background);
+
+  body {
+    background-color: mat-color($background, 'background') !important;
+  }
+}
