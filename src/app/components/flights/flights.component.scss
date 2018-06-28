@@ -1,5 +1,11 @@
+@import '../../../globals-extensions.scss';
+
 $card-height: 60px;
 $icon-margin: 17px;
+
+:host {
+  @extend %page-container;
+}
 
 mat-card {
   height: $card-height;

@@ -1,0 +1,5 @@
+@import '../../../globals-extensions.scss';
+
+:host {
+  @extend %page-container;
+}
