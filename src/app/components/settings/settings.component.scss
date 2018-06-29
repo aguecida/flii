@@ -8,8 +8,13 @@
   padding: 20px 40px;
 }
 
+mat-grid-tile {
+  background: #eee;
+}
+
 section {
   display: flex;
+  margin-bottom: 15px;
 
   .label {
     margin-bottom: 3px;

@@ -1,7 +1,23 @@
-<mat-tab-group disableRipple="true">
+<mat-tab-group disableRipple="true" dynamicHeight="true">
   <mat-tab label="PROFILE">
     <div class="tab-container">
-      Profile settings
+      <div style="display:flex;flex-wrap: wrap;">
+        <div style="flex: 0 1 auto; margin: 0 auto;">
+          <img src="/assets/images/daenerys.jpg" width="200px" height="200px" style="border-radius:200px" />
+        </div>
+        <div style="flex: 1 1 auto; padding: 0 40px;">
+          <div style="display: flex; flex-direction: column;">
+            <mat-form-field>
+              <input matInput placeholder="Full name">
+              <mat-icon matSuffix>person</mat-icon>
+            </mat-form-field>
+            <mat-form-field>
+              <input matInput placeholder="Email address">
+              <mat-icon matSuffix>alternate_email</mat-icon>
+            </mat-form-field>
+          </div>
+        </div>
+      </div>
     </div>
   </mat-tab>
   <mat-tab label="NOTIFICATIONS">
@@ -10,6 +26,14 @@
         <div>
           <div class="label">Email Notifications</div>
           <div class="hint">Allow notifications to be delivered to you via email</div>
+        </div>
+        <div class="spacer"></div>
+        <mat-slide-toggle color="primary"></mat-slide-toggle>
+      </section>
+      <section>
+        <div>
+          <div class="label">Seat Changes</div>
+          <div class="hint">Get notified when a better seat becomes available</div>
         </div>
         <div class="spacer"></div>
         <mat-slide-toggle color="primary"></mat-slide-toggle>
