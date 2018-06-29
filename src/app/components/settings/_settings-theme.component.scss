@@ -1,0 +1,14 @@
+@import '~@angular/material/theming';
+
+@mixin flii-settings-theme($theme) {
+  $foreground: map-get($theme, foreground);
+  $background: map-get($theme, background);
+
+  .mat-tab-label {
+    background-color: mat-color($background, 'background') !important;
+  }
+
+  .tab-container {
+    color: mat-color($foreground, 'text');
+  }
+}

@@ -1,8 +1,17 @@
 <mat-tab-group disableRipple="true">
-  <mat-tab label="First"> Content 1 </mat-tab>
-  <mat-tab label="Second"> Content 2 </mat-tab>
-  <mat-tab label="Third"> Content 3 </mat-tab>
+  <mat-tab label="PROFILE">
+    <div class="tab-container">
+      Profile settings
+    </div>
+  </mat-tab>
+  <mat-tab label="NOTIFICATIONS">
+    <div class="tab-container">
+      Notification settings
+    </div>
+  </mat-tab>
+  <mat-tab label="DISPLAY">
+    <div class="tab-container">
+      <mat-slide-toggle color="primary" (change)="midnightModeToggled($event)">Midnight Mode</mat-slide-toggle>
+    </div>
+  </mat-tab>
 </mat-tab-group>
-
-<span>Midnight Mode</span>
-<mat-slide-toggle color="primary" (change)="midnightModeToggled($event)"></mat-slide-toggle>
