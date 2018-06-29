@@ -66,15 +66,15 @@
     </section>
     <mat-divider></mat-divider>
     <section>
+      <h4 class="mat-subheading-1 form-label pad-top">Age Range</h4>
+      <mat-icon class="pad-top" matTooltip="We'll seat you with people within {{ageRangeSelection}} years of your age" matTooltipPosition="right">info</mat-icon>
+      <mat-slider class="form-control" min="1" max="50" [value]="ageRangeSelection" thumbLabel (change)="ageRangeChange($event)"></mat-slider>
+    </section>
+    <mat-divider></mat-divider>
+    <section>
       <h4 class="mat-subheading-1 form-label">Avoid Children</h4>
       <mat-icon matTooltip="We'll seat you away from children between the age of 0 and 8 years old" matTooltipPosition="right">info</mat-icon>
       <mat-slide-toggle class="form-control" color="primary"></mat-slide-toggle>
     </section>
-    <mat-divider></mat-divider>
-    <section>
-        <h4 class="mat-subheading-1 form-label pad-top">Age Range</h4>
-        <mat-icon class="pad-top" matTooltip="We'll seat you with people within {{ageRangeSelection}} years of your age" matTooltipPosition="right">info</mat-icon>
-        <mat-slider class="form-control" min="1" max="50" [value]="ageRangeSelection" thumbLabel (change)="ageRangeChange($event)"></mat-slider>
-      </section>
   </mat-card-content>
 </mat-card>
