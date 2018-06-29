@@ -4,7 +4,7 @@ import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatRadioModule, MatSelectModule, MatSlideToggleModule, MatCardModule, MatDividerModule, MatDialogModule, MAT_SNACK_BAR_DEFAULT_OPTIONS } from '@angular/material';
 import { MatToolbarModule, MatButtonModule, MatIconModule, MatMenuModule, MatTooltipModule, MatInputModule } from '@angular/material';
-import { MatSnackBarModule } from '@angular/material';
+import { MatSnackBarModule, MatTabsModule } from '@angular/material';
 
 import { AppRoutingModule } from './app.routing';
 import { AppComponent } from './app.component';
@@ -15,7 +15,7 @@ import { HomeComponent } from './components/home/home.component';
 import { RatingsComponent } from './components/ratings/ratings.component';
 import { ConnectComponent } from './components/connect/connect.component';
 import { StatusMessageComponent } from './components/status-message/status-message.component';
-import { ProfileComponent } from './components/profile/profile.component';
+import { SettingsComponent } from './components/settings/settings.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +27,7 @@ import { ProfileComponent } from './components/profile/profile.component';
     RatingsComponent,
     ConnectComponent,
     StatusMessageComponent,
-    ProfileComponent
+    SettingsComponent
   ],
   imports: [
     AppRoutingModule,
@@ -47,7 +47,8 @@ import { ProfileComponent } from './components/profile/profile.component';
     MatMenuModule,
     MatTooltipModule,
     MatInputModule,
-    MatSnackBarModule
+    MatSnackBarModule,
+    MatTabsModule
   ],
   entryComponents: [
     RatingsComponent,

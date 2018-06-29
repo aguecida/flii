@@ -3,11 +3,11 @@ import { DOCUMENT } from '@angular/platform-browser';
 import { MatSlideToggleChange } from '@angular/material';
 
 @Component({
-  selector: 'app-profile',
-  templateUrl: './profile.component.html',
-  styleUrls: ['./profile.component.scss']
+  selector: 'app-settings',
+  templateUrl: './settings.component.html',
+  styleUrls: ['./settings.component.scss']
 })
-export class ProfileComponent implements OnInit {
+export class SettingsComponent implements OnInit {
 
   constructor(@Inject(DOCUMENT) private document: Document) { }
 
