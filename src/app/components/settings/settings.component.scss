@@ -5,6 +5,7 @@
 }
 
 mat-card {
+  margin: 20px 40px;
   padding: 0;
 }
 
@@ -12,12 +13,23 @@ mat-card-content {
   padding: 0 20px;
 }
 
-.tab-container {
-  padding: 20px 40px;
-}
+#profile-card {
+  margin: 75px auto 10px;
+  max-width: 600px;
+  text-align: center;
 
-mat-grid-tile {
-  background: #eee;
+  .profile-avatar {
+    border-radius:200px;
+    margin: -50px 0 10px;
+  }
+
+  .profile-content {
+    display: flex;
+    flex-direction: column;
+    margin: 10px auto;
+    max-width: 400px;
+    width: 70%;
+  }
 }
 
 section {

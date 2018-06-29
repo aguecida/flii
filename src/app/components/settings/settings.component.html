@@ -1,64 +1,54 @@
 <mat-tab-group disableRipple="true" dynamicHeight="true">
   <mat-tab label="PROFILE">
-    <div class="tab-container">
-      <div style="display:flex;flex-wrap: wrap;">
-        <div style="flex: 0 1 auto; margin: 0 auto;">
-          <img src="/assets/images/daenerys.jpg" width="200px" height="200px" style="border-radius:200px;margin-bottom: 10px;" />
-        </div>
-        <div style="flex: 1 1 auto; padding: 0 40px;">
-          <div style="display: flex; flex-direction: column;">
-            <mat-form-field>
-              <input matInput placeholder="Full name">
-              <mat-icon matSuffix>person</mat-icon>
-            </mat-form-field>
-            <mat-form-field>
-              <input matInput placeholder="Email address">
-              <mat-icon matSuffix>alternate_email</mat-icon>
-            </mat-form-field>
-          </div>
-        </div>
+    <mat-card id="profile-card">
+      <img class="profile-avatar" src="/assets/images/daenerys.jpg" width="200px" height="200px" />
+      <div class="profile-content">
+        <mat-form-field>
+          <input matInput placeholder="Full name">
+          <mat-icon matSuffix>person</mat-icon>
+        </mat-form-field>
+        <mat-form-field>
+          <input matInput placeholder="Email address">
+          <mat-icon matSuffix>alternate_email</mat-icon>
+        </mat-form-field>
       </div>
-    </div>
+    </mat-card>
   </mat-tab>
   <mat-tab label="NOTIFICATIONS">
-    <div class="tab-container">
-      <mat-card>
-        <mat-card-content>
-          <section>
-            <div>
-              <div class="label">Email Notifications</div>
-              <div class="hint">Allow notifications to be delivered to you via email</div>
-            </div>
-            <div class="spacer"></div>
-            <mat-slide-toggle color="primary"></mat-slide-toggle>
-          </section>
-          <mat-divider></mat-divider>
-          <section>
-            <div>
-              <div class="label">Seat Changes</div>
-              <div class="hint">Get notified when a better seat becomes available</div>
-            </div>
-            <div class="spacer"></div>
-            <mat-slide-toggle color="primary"></mat-slide-toggle>
-          </section>
-        </mat-card-content>
-      </mat-card>
-    </div>
+    <mat-card>
+      <mat-card-content>
+        <section>
+          <div>
+            <div class="label">Email Notifications</div>
+            <div class="hint">Allow notifications to be delivered to you via email</div>
+          </div>
+          <div class="spacer"></div>
+          <mat-slide-toggle color="primary"></mat-slide-toggle>
+        </section>
+        <mat-divider></mat-divider>
+        <section>
+          <div>
+            <div class="label">Seat Changes</div>
+            <div class="hint">Get notified when a better seat becomes available</div>
+          </div>
+          <div class="spacer"></div>
+          <mat-slide-toggle color="primary"></mat-slide-toggle>
+        </section>
+      </mat-card-content>
+    </mat-card>
   </mat-tab>
   <mat-tab label="DISPLAY">
-    <div class="tab-container">
-      <mat-card>
-        <mat-card-content>
-          <section>
-            <div>
-              <div class="label">Midnight Mode</div>
-              <div class="hint">Enable the dark theme for the entire application</div>
-            </div>
-            <div class="spacer"></div>
-            <mat-slide-toggle color="primary" (change)="midnightModeToggled($event)"></mat-slide-toggle>
-          </section>
-        </mat-card-content>
-      </mat-card>
-    </div>
+    <mat-card>
+      <mat-card-content>
+        <section>
+          <div>
+            <div class="label">Midnight Mode</div>
+            <div class="hint">Enable the dark theme for the entire application</div>
+          </div>
+          <div class="spacer"></div>
+          <mat-slide-toggle color="primary" (change)="midnightModeToggled($event)"></mat-slide-toggle>
+        </section>
+      </mat-card-content>
+    </mat-card>
   </mat-tab>
 </mat-tab-group>
