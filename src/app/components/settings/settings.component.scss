@@ -11,6 +11,10 @@
 section {
   display: flex;
 
+  .label {
+    margin-bottom: 3px;
+  }
+
   .hint {
     font-size: 14px;
     max-width: 400px;
