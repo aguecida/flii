@@ -11,7 +11,14 @@
   </mat-tab>
   <mat-tab label="DISPLAY">
     <div class="tab-container">
-      <mat-slide-toggle color="primary" (change)="midnightModeToggled($event)">Midnight Mode</mat-slide-toggle>
+      <section>
+        <div>
+          <div class="label">Midnight Mode</div>
+          <div class="hint">Enable the dark theme for the entire application</div>
+        </div>
+        <div class="spacer"></div>
+        <mat-slide-toggle color="primary" (change)="midnightModeToggled($event)"></mat-slide-toggle>
+      </section>
     </div>
   </mat-tab>
 </mat-tab-group>

@@ -11,4 +11,8 @@
   .tab-container {
     color: mat-color($foreground, 'text');
   }
+
+  .hint {
+    color: mat-color($foreground, 'hint-text');
+  }
 }
