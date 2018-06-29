@@ -4,6 +4,10 @@
   $primary: map-get($theme, primary);
   $foreground: map-get($theme, foreground);
 
+  #filters {
+    color: mat-color($foreground, 'text');
+  }
+
   .filter {
     color: mat-color($primary);
   }

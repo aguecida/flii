@@ -4,6 +4,14 @@
   @extend %page-container;
 }
 
+mat-card {
+  padding: 0;
+}
+
+mat-card-content {
+  padding: 0 20px;
+}
+
 .tab-container {
   padding: 20px 40px;
 }
@@ -14,7 +22,7 @@ mat-grid-tile {
 
 section {
   display: flex;
-  margin-bottom: 15px;
+  padding: 20px 0;
 
   .label {
     margin-bottom: 3px;
