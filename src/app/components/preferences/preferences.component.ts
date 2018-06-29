@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl } from '@angular/forms';
+import { MatSliderChange } from '@angular/material';
 
 @Component({
   selector: 'app-preferences',
@@ -20,9 +21,15 @@ export class PreferencesComponent implements OnInit {
 
   seatOption = 1;
 
+  ageRangeSelection = 10;
+
   constructor() { }
 
   ngOnInit() {
+  }
+
+  ageRangeChange(slider: MatSliderChange) {
+    this.ageRangeSelection = slider.value;
   }
 
 }
