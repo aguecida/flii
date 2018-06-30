@@ -52,6 +52,11 @@ mat-card, #filters {
 .details {
   margin-top: 5px;
 
+  mat-icon {
+    margin-right: 2px;
+    vertical-align: middle;
+  }
+
   span {
     margin: 5px 10px;
   }
