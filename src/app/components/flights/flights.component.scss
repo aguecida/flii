@@ -47,7 +47,6 @@ mat-card, #filters {
   float: left;
   height: calc(100% - #{$content-padding} * 2);
   padding: $content-padding;
-  // width: calc(100% - 60px - 10px);
 }
 
 .details {
@@ -67,13 +66,5 @@ mat-card, #filters {
 
 .actions {
   float: right;
-
-  .action {
-    cursor: pointer;
-    margin: $icon-margin 6px 0 0;
-
-    &.disabled {
-      cursor: default;
-    }
-  }
+  margin: 10px 5px 0 0;
 }

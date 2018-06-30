@@ -22,10 +22,6 @@
   }
 
   .actions {
-    color: mat-color($primary);
-
-    .action.disabled {
-      color: mat-color($foreground, 'disabled-button');
-    }
+    color: mat-color($foreground, 'icon');
   }
 }
