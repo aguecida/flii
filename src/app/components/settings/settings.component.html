@@ -11,6 +11,11 @@
           <input matInput placeholder="Email address">
           <mat-icon matSuffix>alternate_email</mat-icon>
         </mat-form-field>
+        <mat-form-field (click)="picker.open()">
+          <input matInput [matDatepicker]="picker" placeholder="Date of Birth" (click)="picker.open()" readonly>
+          <mat-icon matSuffix>calendar_today</mat-icon>
+          <mat-datepicker #picker disabled="false"></mat-datepicker>
+        </mat-form-field>
       </div>
     </mat-card>
   </mat-tab>
