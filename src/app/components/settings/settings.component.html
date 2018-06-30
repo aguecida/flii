@@ -1,22 +1,49 @@
 <mat-tab-group disableRipple="true" dynamicHeight="true">
   <mat-tab label="PROFILE">
-    <mat-card id="profile-card">
-      <img class="profile-avatar" src="/assets/images/daenerys.jpg" />
-      <div class="profile-content">
-        <mat-form-field>
-          <input matInput placeholder="Full name">
-          <mat-icon matSuffix>person</mat-icon>
-        </mat-form-field>
-        <mat-form-field>
-          <input matInput placeholder="Email address">
-          <mat-icon matSuffix>alternate_email</mat-icon>
-        </mat-form-field>
-        <mat-form-field (click)="picker.open()">
-          <input matInput [matDatepicker]="picker" placeholder="Date of Birth" (click)="picker.open()" readonly>
-          <mat-icon matSuffix>calendar_today</mat-icon>
-          <mat-datepicker #picker disabled="false"></mat-datepicker>
-        </mat-form-field>
-      </div>
+    <mat-card>
+      <mat-card-content>
+        <section>
+          <div>
+            <div class="label pad-top">Profile Picture</div>
+          </div>
+          <div class="spacer"></div>
+          <img src="/assets/images/daenerys.jpg" height="55px" width="55px" style="border-radius: 50%" />
+        </section>
+        <mat-divider></mat-divider>
+        <section>
+          <div>
+            <div class="label pad-top">Full Name</div>
+          </div>
+          <div class="spacer"></div>
+          <mat-form-field>
+            <input matInput placeholder="Full Name">
+            <mat-icon matSuffix>person</mat-icon>
+          </mat-form-field>
+        </section>
+        <mat-divider></mat-divider>
+        <section>
+          <div>
+            <div class="label pad-top">Email Address</div>
+          </div>
+          <div class="spacer"></div>
+          <mat-form-field>
+            <input matInput placeholder="Email Address">
+            <mat-icon matSuffix>alternate_email</mat-icon>
+          </mat-form-field>
+        </section>
+        <mat-divider></mat-divider>
+        <section>
+          <div>
+            <div class="label pad-top">Date of Birth</div>
+          </div>
+          <div class="spacer"></div>
+          <mat-form-field (click)="datePicker.open()">
+            <input matInput [matDatepicker]="datePicker" placeholder="Date of Birth" (click)="datePicker.open()" readonly>
+            <mat-icon matSuffix>calendar_today</mat-icon>
+            <mat-datepicker #datePicker disabled="false"></mat-datepicker>
+          </mat-form-field>
+        </section>
+      </mat-card-content>
     </mat-card>
   </mat-tab>
   <mat-tab label="NOTIFICATIONS">

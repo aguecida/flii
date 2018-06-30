@@ -15,33 +15,17 @@ mat-card-content {
   padding: 0 20px;
 }
 
-#profile-card {
-  margin: 75px auto 10px;
-  max-width: 600px;
-  text-align: center;
-
-  .profile-avatar {
-    border-radius:200px;
-    height: $avatar-dim;
-    margin: -50px 0 10px;
-    width: $avatar-dim;
-  }
-
-  .profile-content {
-    display: flex;
-    flex-direction: column;
-    margin: 10px auto;
-    max-width: 400px;
-    width: 70%;
-  }
-}
-
 section {
   display: flex;
+  flex-wrap: wrap;
   padding: 20px 0;
 
   .label {
     margin-bottom: 3px;
+
+    &.pad-top {
+      margin-top: 15px;
+    }
   }
 
   .hint {
