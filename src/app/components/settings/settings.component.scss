@@ -1,5 +1,7 @@
 @import '../../../globals-extensions.scss';
 
+$avatar-dim: 200px;
+
 :host {
   @extend %page-container;
 }
@@ -20,7 +22,9 @@ mat-card-content {
 
   .profile-avatar {
     border-radius:200px;
+    height: $avatar-dim;
     margin: -50px 0 10px;
+    width: $avatar-dim;
   }
 
   .profile-content {
