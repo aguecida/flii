@@ -14,12 +14,12 @@ export class PreferencesComponent implements OnInit {
   languageList = ['English', 'French', 'German', 'Spanish', 'Italian'];
 
   seatOptions = [
-    { id: 1, name: 'Window' },
+    { id: 1, name: 'Aisle' },
     { id: 2, name: 'Middle' },
-    { id: 3, name: 'Aisle' }
+    { id: 3, name: 'Window' }
   ];
 
-  seatOption = 1;
+  seatOption = null;
 
   ageRangeSelection = 10;
 
