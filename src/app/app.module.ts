@@ -2,10 +2,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { MatRadioModule, MatSelectModule, MatSlideToggleModule, MatCardModule, MatDividerModule, MatDialogModule, MAT_SNACK_BAR_DEFAULT_OPTIONS } from '@angular/material';
-import { MatToolbarModule, MatButtonModule, MatIconModule, MatMenuModule, MatTooltipModule, MatInputModule } from '@angular/material';
-import { MatSnackBarModule, MatTabsModule, MatSliderModule, MatDatepickerModule, MatNativeDateModule } from '@angular/material';
 
+import { MaterialModule } from './material.module';
 import { AppRoutingModule } from './app.routing';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
@@ -32,37 +30,18 @@ import { SeatMapComponent } from './components/seat-map/seat-map.component';
     SeatMapComponent
   ],
   imports: [
-    AppRoutingModule,
     BrowserModule,
     BrowserAnimationsModule,
+    AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-    MatRadioModule,
-    MatSelectModule,
-    MatSlideToggleModule,
-    MatCardModule,
-    MatDividerModule,
-    MatDialogModule,
-    MatToolbarModule,
-    MatButtonModule,
-    MatIconModule,
-    MatMenuModule,
-    MatTooltipModule,
-    MatInputModule,
-    MatSnackBarModule,
-    MatTabsModule,
-    MatSliderModule,
-    MatDatepickerModule,
-    MatNativeDateModule
+    MaterialModule
   ],
   entryComponents: [
     RatingsComponent,
     ConnectComponent,
     SeatMapComponent,
     StatusMessageComponent
-  ],
-  providers: [
-    { provide: MAT_SNACK_BAR_DEFAULT_OPTIONS, useValue: { duration: 3000, horizontalPosition: 'left' }}
   ],
   bootstrap: [AppComponent]
 })
