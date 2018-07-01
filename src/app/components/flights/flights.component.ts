@@ -25,9 +25,9 @@ export class FlightsComponent implements OnInit {
   searchFilter = '';
 
   flights = [
-    { id: 1, status: 2, flightNumber: 'AC360', origin: 'Toronto', destination: 'Amsterdam', date: 'June 26, 2018' },
-    { id: 2, status: 3, flightNumber: 'BA157', origin: 'London', destination: 'Belize', date: 'June 22, 2018' },
-    { id: 2, status: 3, flightNumber: 'AC637', origin: 'Vancouver', destination: 'Hawaii', date: 'August 5, 2017' }
+    { id: 1, status: 2, flightNumber: 'AC360', origin: 'Toronto', originCode: 'YYZ', destination: 'Amsterdam', destinationCode: 'AMS', date: 'June 26, 2018' },
+    { id: 2, status: 3, flightNumber: 'BA157', origin: 'London', originCode: 'YXU', destination: 'Belize', destinationCode: 'BZE', date: 'June 22, 2018' },
+    { id: 2, status: 3, flightNumber: 'AC637', origin: 'Vancouver', originCode: 'YVR', destination: 'Hawaii', destinationCode: 'HNL', date: 'August 5, 2017' }
   ];
 
   filteredFlights = this.flights;
@@ -55,8 +55,15 @@ export class FlightsComponent implements OnInit {
     this.filteredFlights = this.filteredFlights.filter(flight => {
       const flightNumber = flight.flightNumber.toLowerCase();
       const origin = flight.origin.toLowerCase();
+      const originCode = flight.originCode.toLowerCase();
       const destination = flight.destination.toLowerCase();
-      return flightNumber.includes(this.searchFilter) || origin.includes(this.searchFilter) || destination.includes(this.searchFilter);
+      const destinationCode = flight.destinationCode.toLowerCase();
+
+      return flightNumber.includes(this.searchFilter) ||
+             origin.includes(this.searchFilter) ||
+             originCode.includes(this.searchFilter) ||
+             destination.includes(this.searchFilter) ||
+             destinationCode.includes(this.searchFilter);
     });
   }
 

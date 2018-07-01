@@ -15,9 +15,11 @@
   </div>
   <div class="content">
     <div class="details">
-      <span><mat-icon matTooltip="Flight Number">flight</mat-icon> {{flight.flightNumber}}</span>
-      <span><mat-icon matTooltip="Departure">flight_takeoff</mat-icon> {{flight.origin}}</span>
-      <span><mat-icon matTooltip="Arrival">flight_land</mat-icon> {{flight.destination}}</span>
+      <span>{{flight.flightNumber}}</span>
+      &bull;
+      <span>{{flight.origin}} ({{flight.originCode}})</span>
+      &rarr;
+      <span>{{flight.destination}} ({{flight.destinationCode}})</span>
     </div>
     <div class="date">
       <span>{{flight.date}}</span>
