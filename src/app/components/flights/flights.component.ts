@@ -4,6 +4,7 @@ import { MatDialog, MatDialogRef, MatSnackBar } from '@angular/material';
 import { RatingsComponent } from '../ratings/ratings.component';
 import { ConnectComponent } from '../connect/connect.component';
 import { StatusMessageComponent } from '../status-message/status-message.component';
+import { SeatMapComponent } from '../seat-map/seat-map.component';
 
 @Component({
   selector: 'app-flights',
@@ -101,6 +102,12 @@ export class FlightsComponent implements OnInit {
 
   openConnect(flight) {
     this.connectDialogRef = this.dialog.open(ConnectComponent, {
+      data: flight
+    });
+  }
+
+  openSeatMap(flight) {
+    this.connectDialogRef = this.dialog.open(SeatMapComponent, {
       data: flight
     });
   }

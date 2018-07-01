@@ -30,7 +30,7 @@
     <mat-icon>more_vert</mat-icon>
   </button>
   <mat-menu #menu="matMenu" xPosition="before" overlapTrigger="false">
-    <button mat-menu-item>Seat Map</button>
+    <button mat-menu-item (click)="openSeatMap(flight)">Seat Map</button>
     <button mat-menu-item (click)="openConnect(flight)">Connect with Passengers</button>
     <button mat-menu-item (click)="openRatings(flight)" [disabled]="!ratingsAllowed(flight)">Rate Flight</button>
   </mat-menu>

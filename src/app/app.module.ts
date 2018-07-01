@@ -16,6 +16,7 @@ import { RatingsComponent } from './components/ratings/ratings.component';
 import { ConnectComponent } from './components/connect/connect.component';
 import { StatusMessageComponent } from './components/status-message/status-message.component';
 import { SettingsComponent } from './components/settings/settings.component';
+import { SeatMapComponent } from './components/seat-map/seat-map.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { SettingsComponent } from './components/settings/settings.component';
     RatingsComponent,
     ConnectComponent,
     StatusMessageComponent,
-    SettingsComponent
+    SettingsComponent,
+    SeatMapComponent
   ],
   imports: [
     AppRoutingModule,
@@ -56,6 +58,7 @@ import { SettingsComponent } from './components/settings/settings.component';
   entryComponents: [
     RatingsComponent,
     ConnectComponent,
+    SeatMapComponent,
     StatusMessageComponent
   ],
   providers: [
