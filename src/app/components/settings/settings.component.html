@@ -16,7 +16,7 @@
           </div>
           <div class="spacer"></div>
           <mat-form-field>
-            <input matInput placeholder="Full Name" value="Daenerys Targaryen">
+            <input matInput value="Daenerys Targaryen">
             <mat-icon matSuffix>person</mat-icon>
           </mat-form-field>
         </section>
@@ -27,7 +27,7 @@
           </div>
           <div class="spacer"></div>
           <mat-form-field>
-            <input matInput placeholder="Email Address" value="motherofdragons@gmail.com">
+            <input matInput value="motherofdragons@gmail.com">
             <mat-icon matSuffix>alternate_email</mat-icon>
           </mat-form-field>
         </section>
@@ -38,7 +38,7 @@
           </div>
           <div class="spacer"></div>
           <mat-form-field (click)="dobPicker.open()">
-            <input matInput [matDatepicker]="dobPicker" placeholder="Date of Birth" (click)="dobPicker.open()" readonly>
+            <input matInput [matDatepicker]="dobPicker" (click)="dobPicker.open()" readonly>
             <mat-icon matSuffix>calendar_today</mat-icon>
             <mat-datepicker #dobPicker disabled="false"></mat-datepicker>
           </mat-form-field>

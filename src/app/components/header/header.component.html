@@ -1,17 +1,17 @@
 <mat-toolbar>
   <h4 id="logo" routerLink="/">flii</h4>
   <div class="spacer"></div>
-  <button mat-icon-button color="primary" routerLink="/preferences" matTooltip="Preferences">
+  <a class="header-button" mat-icon-button color="primary" routerLink="/preferences" matTooltip="Preferences">
       <mat-icon>playlist_add_check</mat-icon>
-    </button>
-  <button mat-icon-button color="primary" routerLink="/flights" matTooltip="Flights">
+  </a>
+  <a class="header-button" mat-icon-button color="primary" routerLink="/flights" matTooltip="Flights">
     <mat-icon>flight</mat-icon>
-  </button>
-  <button mat-icon-button color="primary" [matMenuTriggerFor]="menu">
+  </a>
+  <a class="header-button" mat-icon-button color="primary" [matMenuTriggerFor]="menu">
     <mat-icon>more_vert</mat-icon>
-  </button>
+  </a>
   <mat-menu #menu="matMenu" overlapTrigger="false">
-    <button mat-menu-item routerLink="/settings">Settings</button>
-    <button mat-menu-item>Logout</button>
+    <a mat-menu-item routerLink="/settings">Settings</a>
+    <a mat-menu-item>Logout</a>
   </mat-menu>
 </mat-toolbar>
